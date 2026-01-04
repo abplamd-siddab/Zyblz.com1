@@ -1,0 +1,164 @@
+1. Website Goal (Clarity First)
+
+The website should answer within 5 seconds:
+
+What Zyblz does
+
+Who it is for
+
+What problems it solves
+
+Proof that it works (testimonials)
+
+2. Homepage Structure (Recommended)
+Hero Section (Above the Fold)
+
+Headline (strong + simple):
+
+We Build AI-Powered Software & Automations That Scale Your Business
+
+Sub-headline:
+Custom AI chatbots, workflow automation, and intelligent applications built for real business use cases.
+
+Primary CTA:
+
+“Book a Free AI Consultation”
+
+Secondary: “View Our Work”
+
+What We Do (Services Section)
+
+Use icons + short descriptions, not long text.
+
+Core Services:
+
+AI Chatbots
+Sales bots, support bots, WhatsApp bots, website bots
+
+AI Workflow Automation
+CRM automation, lead handling, follow-ups, reporting
+
+Custom Software & Applications
+Web apps, internal tools, SaaS products
+
+AI Tool Integration
+OpenAI, CRM, WhatsApp APIs, Zapier, Make, internal systems
+
+Keep each service to 1–2 lines max.
+
+Industries / Use Cases
+
+Show practical relevance.
+
+Examples:
+
+Exporters & Trading Companies
+
+Agencies & Service Businesses
+
+Sales-Driven Teams
+
+Operations & Back-Office Automation
+
+SaaS & Startups
+
+How Zyblz Works (Process Section)
+
+Simple 4-step flow:
+
+Understand Business Process
+
+Identify Automation Opportunities
+
+Build & Integrate AI Solution
+
+Deploy, Train & Optimize
+
+This builds trust and clarity.
+
+Testimonials (Very Important)
+
+This should be a dedicated, visible section.
+
+Best practice:
+
+Client photo (if possible)
+
+Name + Company
+
+1–2 line result-focused quote
+
+Example format:
+
+“Zyblz automated our lead handling and follow-ups. Our response time dropped by 70%.”
+— Founder, Export Business
+
+If you have multiple testimonials:
+
+Show 3 on homepage
+
+Link to “View All Testimonials”
+
+Why Zyblz (Differentiation Section)
+
+Answer: Why not a freelancer or generic agency?
+
+Points you can highlight:
+
+Business-first automation (not just tools)
+
+Custom-built, not template-based
+
+Real operational understanding
+
+Ongoing support & optimization
+
+Secure & scalable systems
+
+Call to Action (End of Page)
+
+Clear and direct:
+
+Ready to automate your business with AI?
+Button: Book a Free Call
+
+3. Inner Pages You Should Have
+Services Page
+
+Each service explained with:
+
+Problem
+
+Solution
+
+Outcome
+
+Testimonials Page
+
+All testimonials in one place.
+
+About Zyblz
+
+Mission
+
+What kind of problems you solve
+
+Team or leadership credibility (even minimal)
+
+Contact / Book a Call
+
+Simple form
+
+Calendly / meeting link
+
+4. Design Direction (Important)
+
+Dark + light neutral theme (AI feel)
+
+Clean fonts (Inter, Poppins, etc.)
+
+Minimal animations
+
+No clutter
+
+Focus on trust + clarity, not fancy graphics
