@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import logo from "@assets/Zyblz-Logo_color_horizon_3_1767496346796.png";
 
 export function Footer() {
   return (
@@ -8,8 +9,8 @@ export function Footer() {
           
           <div className="max-w-xs">
             <Link href="/">
-              <a className="text-2xl font-bold font-heading tracking-tighter text-white hover:text-primary transition-colors block mb-4">
-                Zyblz<span className="text-primary">.</span>
+              <a className="block mb-6 hover:opacity-90 transition-opacity">
+                <img src={logo} alt="Zyblz" className="h-10 w-auto" />
               </a>
             </Link>
             <p className="text-muted-foreground text-sm">

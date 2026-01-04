@@ -3,6 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@assets/Zyblz-Logo_color_horizon_3_1767496346796.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,8 +34,8 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/">
-          <a className="text-2xl font-bold font-heading tracking-tighter text-white hover:text-primary transition-colors">
-            Zyblz<span className="text-primary">.</span>
+          <a className="block hover:opacity-90 transition-opacity">
+            <img src={logo} alt="Zyblz" className="h-10 w-auto" />
           </a>
         </Link>
 
