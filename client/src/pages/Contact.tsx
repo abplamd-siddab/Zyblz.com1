@@ -9,7 +9,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Calendar, Mail, MessageSquare } from "lucide-react";
+import { Calendar, Mail } from "lucide-react";
+import { useMutation } from "@tanstack/react-query";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
@@ -18,9 +19,11 @@ const formSchema = z.object({
   message: z.string().min(10, "Please provide more details about your needs"),
 });
 
+type FormValues = z.infer<typeof formSchema>;
+
 export default function ContactPage() {
   const { toast } = useToast();
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -30,13 +33,41 @@ export default function ContactPage() {
     },
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
-    console.log(values);
-    toast({
-      title: "Message Sent",
-      description: "We'll get back to you shortly!",
-    });
-    form.reset();
+  const mutation = useMutation({
+    mutationFn: async (values: FormValues) => {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(values),
+      });
+
+      if (!response.ok) {
+        const error = await response.json();
+        throw new Error(error.message || "Failed to submit form");
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message Sent Successfully!",
+        description: "We'll get back to you shortly.",
+      });
+      form.reset();
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Error",
+        description: error.message,
+        variant: "destructive",
+      });
+    },
+  });
+
+  function onSubmit(values: FormValues) {
+    mutation.mutate(values);
   }
 
   return (
@@ -91,7 +122,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Name</FormLabel>
                           <FormControl>
-                            <Input placeholder="John Doe" {...field} />
+                            <Input placeholder="John Doe" data-testid="input-name" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -104,7 +135,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Email</FormLabel>
                           <FormControl>
-                            <Input placeholder="john@company.com" {...field} />
+                            <Input placeholder="john@company.com" data-testid="input-email" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -117,7 +148,7 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>Company</FormLabel>
                           <FormControl>
-                            <Input placeholder="Your Company Ltd" {...field} />
+                            <Input placeholder="Your Company Ltd" data-testid="input-company" {...field} />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -130,13 +161,25 @@ export default function ContactPage() {
                         <FormItem>
                           <FormLabel>How can we help?</FormLabel>
                           <FormControl>
-                            <Textarea placeholder="We need to automate our sales process..." className="min-h-[120px]" {...field} />
+                            <Textarea 
+                              placeholder="We need to automate our sales process..." 
+                              className="min-h-[120px]" 
+                              data-testid="input-message"
+                              {...field} 
+                            />
                           </FormControl>
                           <FormMessage />
                         </FormItem>
                       )}
                     />
-                    <Button type="submit" className="w-full h-12 text-base">Send Message</Button>
+                    <Button 
+                      type="submit" 
+                      className="w-full h-12 text-base" 
+                      disabled={mutation.isPending}
+                      data-testid="button-submit"
+                    >
+                      {mutation.isPending ? "Sending..." : "Send Message"}
+                    </Button>
                   </form>
                 </Form>
               </CardContent>
