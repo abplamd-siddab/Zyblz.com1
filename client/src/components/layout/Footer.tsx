@@ -13,7 +13,7 @@ export function Footer() {
               </a>
             </Link>
             <p className="text-muted-foreground text-sm">
-              Empowering businesses with intelligent automation and custom AI software.
+              Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.
             </p>
           </div>
 

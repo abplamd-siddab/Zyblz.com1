@@ -29,7 +29,7 @@ export function Hero() {
             We Build AI-Powered Software & <span className="text-primary bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">Automations</span> That Scale Your Business
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto leading-relaxed">
-            Custom AI chatbots, workflow automation, and intelligent applications built for real business use cases.
+            Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/contact">
