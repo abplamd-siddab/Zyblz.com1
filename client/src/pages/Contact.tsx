@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
-import { Calendar, Mail } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
 import { useMutation } from "@tanstack/react-query";
 
 const formSchema = z.object({
@@ -80,18 +80,23 @@ export default function ContactPage() {
             <div>
               <h1 className="text-4xl md:text-5xl font-bold font-heading mb-6">Let's Automate Your Business</h1>
               <p className="text-xl text-muted-foreground mb-12">
-                Have a project in mind? Want to see how AI can help you? Fill out the form or book a call directly.
+                Have a project in mind? Want to see how AI can help you? Fill out the form or reach out directly.
               </p>
 
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Calendar className="w-6 h-6 text-primary" />
+                    <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-2">Book a Call Directly</h3>
-                    <p className="text-muted-foreground mb-4">Skip the back-and-forth and find a time that works for you.</p>
-                    <Button variant="outline">View Calendar</Button>
+                    <h3 className="text-xl font-bold mb-2">Call Us</h3>
+                    <a 
+                      href="tel:+919724445451" 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      data-testid="link-phone"
+                    >
+                      +91 9724445451
+                    </a>
                   </div>
                 </div>
 
@@ -101,7 +106,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2">Email Us</h3>
-                    <p className="text-muted-foreground">hello@zyblz.com</p>
+                    <a 
+                      href="mailto:hello@zyblz.com" 
+                      className="text-muted-foreground hover:text-primary transition-colors"
+                      data-testid="link-email"
+                    >
+                      hello@zyblz.com
+                    </a>
                   </div>
                 </div>
               </div>
