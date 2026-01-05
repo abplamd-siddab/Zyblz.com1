@@ -1,27 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Quote } from "lucide-react";
-import avatar1 from "@assets/generated_images/professional_male_headshot.png";
-import avatar2 from "@assets/generated_images/professional_female_headshot.png";
 
 const testimonials = [
   {
-    quote: "Zyblz automated our lead handling and follow-ups. Our response time dropped by 70% and conversion rates skyrocketed.",
-    name: "James Carter",
-    role: "Founder, Export Business",
-    image: avatar1,
+    quote: "Zyblz built us a complete inventory management system that transformed how we track stock across multiple warehouses. Real-time updates and automated reordering saved us countless hours.",
+    name: "Dev Singh",
+    role: "Founder, FMCG Importer, Philippines",
   },
   {
-    quote: "The custom AI chatbot they built handles 90% of our support queries instantly. It feels like magic.",
-    name: "Sarah Jenkins",
-    role: "Operations Manager, TechSaaS",
-    image: avatar2,
+    quote: "The after-sales service app they created streamlined our entire customer support process. Service requests, technician assignments, and follow-ups - all automated and working flawlessly.",
+    name: "Tarun Goswami",
+    role: "Entrepreneur, Ivory Coast",
   },
   {
-    quote: "We replaced 3 manual admin roles with a single automated workflow. The ROI was immediate.",
-    name: "Michael Chen",
-    role: "Director, Agency Co.",
-    image: null, // Fallback
+    quote: "Our lending business needed a robust system to manage loans, payments, and client communications. Zyblz delivered exactly what we needed - efficient, reliable, and easy to use.",
+    name: "Mandeep Jhanda",
+    role: "Entrepreneur, Canada",
   },
 ];
 
@@ -44,9 +39,10 @@ export function Testimonials() {
                 <p className="text-lg text-white/90 mb-8 italic">"{t.quote}"</p>
                 
                 <div className="flex items-center gap-4">
-                  <Avatar className="w-12 h-12 border-2 border-primary/20">
-                    <AvatarImage src={t.image || ""} />
-                    <AvatarFallback>{t.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
+                  <Avatar className="w-12 h-12 border-2 border-primary/20 bg-primary/10">
+                    <AvatarFallback className="bg-primary/10 text-primary font-bold">
+                      {t.name.split(' ').map(n => n[0]).join('')}
+                    </AvatarFallback>
                   </Avatar>
                   <div>
                     <h4 className="font-bold text-white">{t.name}</h4>
