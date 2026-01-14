@@ -37,7 +37,7 @@ export function Hero() {
                 Book a Free AI Consultation
               </Button>
             </Link>
-            <Link href="/services">
+            <Link href="/work">
               <Button variant="outline" size="lg" className="h-14 px-8 text-base bg-transparent border-white/10 hover:bg-white/5 w-full sm:w-auto">
                 View Our Work
               </Button>

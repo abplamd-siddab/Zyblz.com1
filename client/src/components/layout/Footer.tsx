@@ -8,10 +8,8 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-12">
           
           <div className="max-w-xs">
-            <Link href="/">
-              <a className="block mb-6 hover:opacity-90 transition-opacity">
-                <img src={logo} alt="Zyblz" className="h-10 w-auto" />
-              </a>
+            <Link href="/" className="block mb-6 hover:opacity-90 transition-opacity">
+              <img src={logo} alt="Zyblz" className="h-10 w-auto" />
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.
@@ -29,17 +27,17 @@ export function Footer() {
             <div>
               <h4 className="font-bold mb-4">Company</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/about"><a className="hover:text-primary transition-colors">About Us</a></Link></li>
-                <li><Link href="/services"><a className="hover:text-primary transition-colors">Services</a></Link></li>
-                <li><Link href="/contact"><a className="hover:text-primary transition-colors">Contact</a></Link></li>
+                <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+                <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
+                <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
               </ul>
             </div>
             
             <div>
               <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm text-muted-foreground">
-                <li><Link href="/privacy"><a className="hover:text-primary transition-colors">Privacy Policy</a></Link></li>
-                <li><Link href="/terms"><a className="hover:text-primary transition-colors">Terms of Service</a></Link></li>
+                <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
+                <li><Link href="/terms" className="hover:text-primary transition-colors">Terms of Service</Link></li>
               </ul>
             </div>
 

@@ -10,6 +10,7 @@ import AboutPage from "@/pages/About";
 import ContactPage from "@/pages/Contact";
 import PrivacyPage from "@/pages/Privacy";
 import TermsPage from "@/pages/Terms";
+import WorkPage from "@/pages/Work";
 
 function Router() {
   return (
@@ -20,6 +21,7 @@ function Router() {
       <Route path="/contact" component={ContactPage} />
       <Route path="/privacy" component={PrivacyPage} />
       <Route path="/terms" component={TermsPage} />
+      <Route path="/work" component={WorkPage} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -33,24 +33,22 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/">
-          <a className="block hover:opacity-90 transition-opacity">
-            <img src={logo} alt="Zyblz" className="h-10 w-auto" />
-          </a>
+        <Link href="/" className="block hover:opacity-90 transition-opacity">
+          <img src={logo} alt="Zyblz" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a
-                className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  location === link.href ? "text-primary" : "text-muted-foreground"
-                )}
-              >
-                {link.name}
-              </a>
+            <Link
+              key={link.name}
+              href={link.href}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-primary",
+                location === link.href ? "text-primary" : "text-muted-foreground"
+              )}
+            >
+              {link.name}
             </Link>
           ))}
           <Link href="/contact">
@@ -71,17 +69,17 @@ export function Navbar() {
       {isOpen && (
         <div className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-xl border-b border-white/10 p-6 md:hidden flex flex-col gap-4 shadow-2xl">
           {navLinks.map((link) => (
-            <Link key={link.name} href={link.href}>
-              <a
-                className="text-lg font-medium text-white/80 hover:text-primary py-2"
-                onClick={() => setIsOpen(false)}
-              >
-                {link.name}
-              </a>
+            <Link
+              key={link.name}
+              href={link.href}
+              className="text-lg font-medium text-white/80 hover:text-primary py-2"
+              onClick={() => setIsOpen(false)}
+            >
+              {link.name}
             </Link>
           ))}
-          <Link href="/contact">
-            <Button className="w-full mt-2" onClick={() => setIsOpen(false)}>Book a Call</Button>
+          <Link href="/contact" onClick={() => setIsOpen(false)}>
+            <Button className="w-full mt-2">Book a Call</Button>
           </Link>
         </div>
       )}
