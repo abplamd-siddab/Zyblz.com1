@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logo from "@assets/generated_images/lightning_z_spark_zyblz_logo.png";
+import logo from "@assets/Zyblz-Logo_color_horizon_3_1767496346796.png";
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
           
           <div className="max-w-xs">
             <Link href="/" className="block mb-6 hover:opacity-90 transition-opacity">
-              <img src={logo} alt="Zyblz" className="h-10 w-auto mix-blend-screen" />
+              <img src={logo} alt="Zyblz" className="h-10 w-auto" />
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.
