@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import logo from "@assets/Zyblz-Logo_color_horizon_3_1767496346796.png";
+import logo from "@assets/generated_images/lightning_z_spark_zyblz_logo.png";
 
 export function Footer() {
   return (

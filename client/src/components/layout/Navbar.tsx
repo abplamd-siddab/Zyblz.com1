@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@assets/Zyblz-Logo_color_horizon_3_1767496346796.png";
+import logo from "@assets/generated_images/lightning_z_spark_zyblz_logo.png";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
