@@ -9,7 +9,7 @@ export function Footer() {
           
           <div className="max-w-xs">
             <Link href="/" className="block mb-6 hover:opacity-90 transition-opacity">
-              <img src={logo} alt="Zyblz" className="h-10 w-auto" />
+              <img src={logo} alt="Zyblz" className="h-10 w-auto mix-blend-screen" />
             </Link>
             <p className="text-muted-foreground text-sm mb-4">
               Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.

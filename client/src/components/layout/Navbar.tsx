@@ -34,7 +34,7 @@ export function Navbar() {
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
         <Link href="/" className="block hover:opacity-90 transition-opacity">
-          <img src={logo} alt="Zyblz" className="h-10 w-auto" />
+          <img src={logo} alt="Zyblz" className="h-10 w-auto mix-blend-screen" />
         </Link>
 
         {/* Desktop Nav */}
