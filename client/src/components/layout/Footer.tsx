@@ -15,11 +15,12 @@ export function Footer() {
               Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.
             </p>
             <div className="text-muted-foreground text-xs space-y-1">
-              <p className="font-medium text-white/80">Siddab Ventures Private Limited</p>
+              <p className="font-medium text-white/80">Siddab Packing Pvt Ltd</p>
               <p>B 403 Empire Business Hub,</p>
               <p>Science City Road,</p>
               <p>Ahmedabad 380060, Gujarat, INDIA</p>
-              <p className="mt-2">GST# 24AAICA9263G1ZL</p>
+              <p className="mt-2">GST# 24ABGCS9421H1Z9</p>
+              <p>IEC# ABGCS9421H</p>
             </div>
           </div>
 
