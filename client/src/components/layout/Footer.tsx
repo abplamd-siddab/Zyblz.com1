@@ -15,12 +15,8 @@ export function Footer() {
               Zyblz builds AI-powered software and automation systems that simplify operations and accelerate growth.
             </p>
             <div className="text-muted-foreground text-xs space-y-1">
-              <p className="font-medium text-white/80">Siddab Packing Pvt Ltd</p>
-              <p>B 403 Empire Business Hub,</p>
-              <p>Science City Road,</p>
-              <p>Ahmedabad 380060, Gujarat, INDIA</p>
-              <p className="mt-2">GST# 24ABGCS9421H1Z9</p>
-              <p>IEC# ABGCS9421H</p>
+              <p className="font-medium text-white/80">Siddab Ventures Private Limited</p>
+              <p>Naranpura, Ahmedabad</p>
             </div>
           </div>
 
@@ -30,6 +26,7 @@ export function Footer() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
                 <li><Link href="/services" className="hover:text-primary transition-colors">Services</Link></li>
+                <li><Link href="/work" className="hover:text-primary transition-colors">Work</Link></li>
                 <li><Link href="/contact" className="hover:text-primary transition-colors">Contact</Link></li>
               </ul>
             </div>

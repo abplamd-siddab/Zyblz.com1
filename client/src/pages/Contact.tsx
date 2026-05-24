@@ -123,12 +123,8 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-xl font-bold mb-2">Visit Us</h3>
                     <div className="text-muted-foreground text-sm space-y-1">
-                      <p className="font-medium text-white/80">Siddab Packing Pvt Ltd</p>
-                      <p>B 403 Empire Business Hub,</p>
-                      <p>Science City Road,</p>
-                      <p>Ahmedabad 380060, Gujarat, INDIA</p>
-                      <p className="mt-2 text-xs">GST# 24ABGCS9421H1Z9</p>
-                      <p className="text-xs">IEC# ABGCS9421H</p>
+                      <p className="font-medium text-white/80">Siddab Ventures Private Limited</p>
+                      <p>Naranpura, Ahmedabad</p>
                     </div>
                   </div>
                 </div>
