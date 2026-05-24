@@ -32,7 +32,9 @@
   --font-heading: 'Poppins', sans-serif;
 }
 
-:root {
+/* ── Dark theme (default) ───────────────────────────────────── */
+:root,
+.dark {
   /* Dark Theme Default based on brief "Dark + light neutral theme (AI feel)" */
   --background: 224 71% 4%;     /* Very dark blue/black */
   --foreground: 210 40% 98%;    /* Off-white */
@@ -65,8 +67,40 @@
   --radius: 0.5rem;
 }
 
+/* ── Light theme ────────────────────────────────────────────── */
+.light {
+  --background: 210 40% 98%;    /* Near-white with a cool tint */
+  --foreground: 224 71% 8%;     /* Deep navy text */
+
+  --card: 0 0% 100%;            /* Pure white cards */
+  --card-foreground: 224 71% 8%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 8%;
+
+  --primary: 217 91% 55%;       /* Slightly deeper blue for readability on white */
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 214 32% 91%;     /* Light blue-grey */
+  --secondary-foreground: 224 71% 8%;
+
+  --muted: 214 32% 91%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 214 32% 91%;
+  --accent-foreground: 224 71% 8%;
+
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 100%;
+
+  --border: 214 32% 87%;
+  --input: 214 32% 87%;
+  --ring: 217 91% 55%;
+}
+
 body {
   @apply bg-background text-foreground font-sans antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -75,4 +109,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .glass-card {
   @apply bg-card/50 backdrop-blur-md border border-white/10;
+}
+
+/* In light mode, glass-card uses a subtle shadow instead */
+.light .glass-card {
+  @apply bg-card/80 backdrop-blur-md border border-black/8 shadow-sm;
 }

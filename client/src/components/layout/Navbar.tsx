@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 import logo from "@assets/Zyblz-Logo_color_horizon_3_1767496346796.png";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,6 +53,7 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
+          <ThemeToggle />
           <Link href="/contact">
             <Button size="sm" className="font-medium">Book a Call</Button>
           </Link>
@@ -79,6 +81,10 @@ export function Navbar() {
               {link.name}
             </Link>
           ))}
+          <div className="flex items-center gap-3 pt-2">
+            <ThemeToggle />
+            <span className="text-sm text-muted-foreground">Toggle theme</span>
+          </div>
           <Link href="/contact" onClick={() => setIsOpen(false)}>
             <Button className="w-full mt-2">Book a Call</Button>
           </Link>
